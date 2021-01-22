@@ -14,7 +14,7 @@
       "openshift.io/support-url": "https://access.redhat.com"
     }
   },
-  "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nginx-ex/blob/master/README.md.",
+  "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/vbrake/nexxees/blob/master/README.md.",
   "labels": {
     "template": "nginx-example"
   },
@@ -242,7 +242,7 @@
       "displayName": "Git Repository URL",
       "description": "The URL of the repository with your application source code.",
       "required": true,
-      "value": "https://github.com/sclorg/nginx-ex.git"
+      "value": "https://github.com/vbrake/nexxees.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
