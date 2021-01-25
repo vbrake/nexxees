@@ -10,9 +10,12 @@ from email.message import EmailMessage
 _email = ''
 _msg = MIMEMultipart()
 
+#Executa comando para descobrir qual url da aplicacao e cria url com o json
 _output = subprocess.run(['oc', 'get', 'route', 'nginx-example', "--template='{{ .spec.host }}'"], stdout=subprocess.PIPE, universal_newlines=True)
 _output.stdout = "http://" + _output.stdout.strip("'") + "/nexxees.json"
 
+#Verifica se url esta no ar. Caso esteja, salva quais servicos estao down. 
+#Caso nao esteja, finaliza script com descricao de erro.
 try:
   with urllib.request.urlopen(_output.stdout) as f:
     _json = f.read().decode('utf-8')
@@ -24,6 +27,7 @@ except urllib.error.URLError as e:
   _erro = "Erro ao acessar json: " + e.reason + ". Finalizando script..."
   sys.exit(_erro)
 
+#Comandos para se conectar ao email e enviar mensagem indicando quais servicos estao down.
 _server = smtplib.SMTP('smtp.gmail.com: 587')
 _server.starttls()
 _msg['Subject'] = "Servicos down"
