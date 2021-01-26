@@ -1,6 +1,6 @@
 # Questão 1
 
-De acordo com os requisitos, penso que o ponto chave seria verificar a integridade do arquivo que é enviado ao servidor FTP. Penso que um acordo com a fábrica de software para envio de um md5 junto do arquivo traria maior credibilidade ao deploy e evitaria erros esotéricos. Como a parte do build não depende de nós, penso que um script que verificasse novos arquivos no ftp, junto do seu md5 (caso possível), seria suficiente.
+De acordo com os requisitos, penso que o ponto chave seria verificar a integridade do arquivo que é enviado ao servidor FTP. Um acordo com a fábrica de software para envio de um md5 junto do arquivo traria maior credibilidade ao deploy e evitaria erros esotéricos. Como a parte do build não depende de nós, penso que um script que verificasse novos arquivos no ftp, junto do seu md5 (caso possível), seria suficiente.
 O deploy poderia ser feito com um mero acesso via ssh a máquina de destino, junto com o comando para sua execução. Tanto a verificação quanto a execução poderia ser realizada com um shell script, hospedado em servidor local ou em um container que tivesse acesso a ambas as pontas. Possíveis erros no deploy poderiam e devem ser enviados via alerta a um email para a equipe de desenvolvimento.
 
 # Questão 2
@@ -63,7 +63,7 @@ De acordo com a imagem acima, ao acessarmos http://nginx-example-nexxees.192.168
 
 # Questão 3
 
-Foi criado um script em python que verifica se a url está no ar, e caso esteja, envia um email alertanxs@gmail.com, dizendo quais serviços estão fora do ar. O script está disponível neste repositório com o nome `verifica-disponbilidades.py`. Ele deve ser executado da mesma máquina que executou o minishift. Abaixo segue um exemplo do script em ação:
+Foi criado um script em python que verifica se a url está no ar, e caso esteja, envia um email para alertanxs@gmail.com, dizendo quais serviços estão fora do ar. O script está disponível neste repositório com o nome `verifica-disponbilidades.py`. Ele deve ser executado da mesma máquina que executou o minishift. Abaixo segue um exemplo do script em ação:
 ```
 PS C:\Users\Junior-NB\Documents\nexxees> py.exe .\verifica-disponibilidades.py
 Email enviado com sucesso para alertanxs@gmail.com
