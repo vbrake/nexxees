@@ -50,7 +50,8 @@ Ao digitar minishift status, ele deve retornar informações sobre o minishift.
 
 ![Nexxees02-06](images/nexxees02-06.jpg)
 
-8. Crie uma nova aplicação utilizando o json a seguir. Ela foi criada usando como base o exemplo do projeto do nginx no minishift, com as variáveis trocadas para o repositório atual:
+8. Crie uma nova aplicação utilizando o json a seguir. Ele foi criado usando como base o exemplo do projeto do nginx no minishift, com as variáveis trocadas para o repositório atual:
+
 `oc new-app -f https://raw.githubusercontent.com/vbrake/nexxees/master/nginx.json`
 
 ![Nexxees02-07](images/nexxees02-07.jpg)
