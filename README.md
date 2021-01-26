@@ -46,6 +46,7 @@ Ao digitar minishift status, ele deve retornar informações sobre o minishift.
 ![Nexxees02-05](images/nexxees02-05.jpg)
 
 7. Crie um novo projeto. Por exemplo, para se criar um projeto com o nome nexxees, execute o comando a seguir:
+
 `oc new-project nexxees`
 
 ![Nexxees02-06](images/nexxees02-06.jpg)
